@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { useSelector } from "react-redux";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import { Link } from "react-router-dom";
 import {
   getDownloadURL,
   getStorage,
@@ -24,7 +25,7 @@ import { useDispatch } from "react-redux";
 import { HiOutlineExclamationCircle } from "react-icons/hi";
 
 const DashProfile = () => {
-  const { currentUser, error } = useSelector((state) => state.user);
+  const { currentUser, error, loading } = useSelector((state) => state.user);
   const [imageFile, setImageFile] = useState(null);
   const [imageFileUrl, setImageFileUrl] = useState(null);
   const [imageFileUploadProgress, setimageFileUploadProgress] = useState(null);
@@ -227,9 +228,17 @@ const DashProfile = () => {
           id="password"
           onChange={handleChange}
         />
-        <Button type="submit" gradientDuoTone="purpleToBlue" outline>
-          Update
+        <Button type="submit" gradientDuoTone="purpleToBlue" outline disabled={loading||imgFileUpload}>
+          {loading ? 'loading...': 'Update'}
         </Button>
+
+        {currentUser.isAdmin && (
+          <Link to={`/create-post`}>
+            <Button type="button" gradientDuoTone="purpleToBlue" className="w-full" >
+              Create a Post
+            </Button>
+          </Link>
+        )}
       </form>
       <div className="flex justify-between mt-5">
         <span
