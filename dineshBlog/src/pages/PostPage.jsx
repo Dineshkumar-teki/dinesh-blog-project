@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Button, Spinner } from "flowbite-react";
+import CommentSection from "../components/CommentSection";
 
 const PostPage = () => {
   const { postSlug } = useParams();
@@ -55,6 +56,7 @@ const PostPage = () => {
         <span>{post && (post.content.length/1000).toFixed(0)} mins read</span>
       </div>
       <div className="p-3 max-w-2xl mx-auto w-full post-content" dangerouslySetInnerHTML={{__html:post && post.content}} ></div>
+      <CommentSection postId={post._id} />
     </main>
   );
 };
