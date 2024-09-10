@@ -79,9 +79,9 @@ const Header = () => {
             </Dropdown.Header>
             <Link to={"/dashboard?tab=profile"}>
               <Dropdown.Item>Profile</Dropdown.Item>
-              <Dropdown.Divider />
-              <Dropdown.Item onClick={handleSignout}>Sign Out</Dropdown.Item>
             </Link>
+            <Dropdown.Divider />
+            <Dropdown.Item onClick={handleSignout}>Sign Out</Dropdown.Item>
           </Dropdown>
         ) : (
           <Link to="sign-in">
