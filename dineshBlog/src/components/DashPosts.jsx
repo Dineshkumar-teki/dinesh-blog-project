@@ -142,7 +142,9 @@ const DashPosts = () => {
           )}
         </>
       ) : (
-        <p>You have no posts yet!</p>
+        <div className="flex justify-center items-center min-h-screen text-2xl">
+            <p>You have no posts yet!</p>
+        </div>
       )}
       <Modal
         show={showModal}
