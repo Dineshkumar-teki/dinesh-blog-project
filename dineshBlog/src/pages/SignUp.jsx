@@ -2,6 +2,7 @@ import { Alert, Button, Label, Spinner, TextInput } from "flowbite-react";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import OAuth from "../components/OAuth";
+import signInImage from "../assets/signInImage.png";
 
 const SignUp = () => {
   const [formData, setFormData] = useState({});
@@ -48,12 +49,18 @@ const SignUp = () => {
       <div className="w-[100%] md:w-[50%] flex justify-center mb-10 md:mb-0">
         <Link
           to="/"
-          className="whitespace-nowrap text-4xl font-bold dark:text-white self-center"
+          className="whitespace-nowrap text-4xl font-bold dark:text-white self-center md:hidden"
         >
-          <span className="px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white">
+          <span className="px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white ">
             Dinesh's
           </span>
           Blog
+        </Link>
+        <Link
+          to="/"
+          className="whitespace-nowrap text-4xl font-bold dark:text-white self-center max-sm:hidden md:block"
+        >
+          <img src={signInImage} alt="signInImage" className="w-full " />
         </Link>
       </div>
       <div className="w-[100%] md:w-[50%] flex flex-col justify-center items-center md:items-start">
@@ -102,7 +109,7 @@ const SignUp = () => {
               "Sign Up"
             )}
           </Button>
-          <OAuth/>
+          <OAuth />
         </form>
         <div className="flex gap-2 text-sm mt-3">
           <span>Have an account?</span>
