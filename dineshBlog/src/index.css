@@ -3,23 +3,42 @@
 @tailwind utilities;
 
 .post-content p {
-    margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
-.post-content h1{
-    font-size: 1.5rem;
-    font-weight: 600;
-    font-family: sans-serif;
-    margin: 1.5rem 0;
+.post-content h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: sans-serif;
+  margin: 1.5rem 0;
 }
-.post-content h2{
-    font-size: 1.4rem;
-    font-family: sans-serif;
-    margin: 1rem 0;
+.post-content h2 {
+  font-size: 1.4rem;
+  font-family: sans-serif;
+  margin: 1rem 0;
 }
-.post-content a{
-    color: blue;
-    text-decoration: none;
+.post-content a {
+  color: blue;
+  text-decoration: none;
 }
-.post-content a:hover{
-    text-decoration: underline;
+.post-content a:hover {
+  text-decoration: underline;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  background: rgb(94, 93, 93);
+}
+::-webkit-scrollbar-track {
+  background: rgb(94, 93, 93);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: silver;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(155, 154, 154);
+  }
+::-webkit-scrollbar-corner{
+    border-radius: 4px;
 }

@@ -6,6 +6,8 @@ import { FaMoon, FaSun } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 import { toogleTheme } from "../redux/theme/themeSlice";
 import { signoutSuccess } from "../redux/user/userSlice";
+import logo from '../assets/logo.png'
+import logoblack from '../assets/logo-black.png'
 
 const Header = () => {
   const [searchTerm, setsearchTerm] = useState("");
@@ -54,10 +56,12 @@ const Header = () => {
         to="/"
         className="self-center whitespace-nowrap text-sm lg:text-xl font-semibold dark:text-white"
       >
-        <span className="px-2 py-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white">
+        <img src={theme === 'dark'? logo : logoblack} alt="" className="w-20 object-scale-down" />
+
+        {/* <span className="px-2 py-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white">
           Dinesh's
         </span>
-        Blog
+        Blog */}
       </Link>
       <form onSubmit={handleSubmit}>
         <TextInput

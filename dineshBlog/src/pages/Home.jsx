@@ -23,10 +23,14 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       <div className="flex flex-col items-start gap-6 px-3 p-28 max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold">Welcome to my Blog.</h1>
-        <p className="text-gray-500 text-xs sm:text-sm">
-          Here you'll find a variety of articles and tutorials on topicd such as
-          Javascript, react, Python
+        <h1 className="text-3xl font-bold">
+          Welcome to <span className="text-4xl text-teal-400">Dinesh's Blog</span>! I'm glad you're here.
+        </h1>
+        <p className="text-gray-500 text-xs sm:text-sm lg:w-[50vw]">
+          This blog covers a variety of topics, from technology and web
+          development to personal growth and productivity. My goal is to share
+          valuable insights and spark meaningful conversations. Feel free to
+          explore, engage, and be part of the journey!
         </p>
         <Link
           to="/search"

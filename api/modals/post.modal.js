@@ -17,7 +17,7 @@ const postSchema = new mongoose.Schema(
     },
     image: {
       type: String,
-      default: "",
+      default: "https://img.freepik.com/free-vector/copywriting-concept-with-male-female-authors-writing-posts-laptop-creative-ideas-notepad-flat-vector-illustration_1284-84237.jpg?size=626&ext=jpg&uid=R136712360&ga=GA1.1.1914382452.1716092979&semt=ais_hybrid",
     },
     category: {
       type: String,
