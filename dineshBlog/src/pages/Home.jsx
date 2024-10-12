@@ -41,7 +41,7 @@ const Home = () => {
       </div>
       <div className="max-w-6xl mx-auto p-3 flex gap-8 py-7">
         {posts && posts.length > 0 && (
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 w-full">
             <h2 className="text-center text-2xl">Recent Posts</h2>
             <div className="flex flex-wrap justify-center gap-4">
               {posts.map((post) => (

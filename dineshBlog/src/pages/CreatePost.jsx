@@ -12,7 +12,6 @@ import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { useNavigate } from "react-router-dom";
 
-
 const CreatePost = () => {
   const [file, setFile] = useState(null);
   const [imageUploadProgress, setImageUploadProgress] = useState(null);
@@ -76,7 +75,7 @@ const CreatePost = () => {
       }
       if (res.ok) {
         setPublishErr(null);
-        navigate(`/post/${data.slug}`)
+        navigate(`/post/${data.slug}`);
       }
     } catch (error) {
       setPublishErr("Something went wrong");
@@ -104,9 +103,46 @@ const CreatePost = () => {
             }
           >
             <option value="uncategorized">Select a category</option>
-            <option value="javascript">JavaScript</option>
-            <option value="react">React</option>
-            <option value="python">Python</option>
+            <option value="web-development">Web Development</option>
+            <option value="software-engineering">Software Engineering</option>
+            <option value="full-stack-development">
+              Full Stack Development
+            </option>
+            <option value="backend-development">Backend Development</option>
+            <option value="frontend-development">Frontend Development</option>
+            <option value="mobile-app-development">
+              Mobile App Development
+            </option>
+            <option value="devops-cloud-computing">
+              DevOps and Cloud Computing
+            </option>
+            <option value="ai-machine-learning">
+              Artificial Intelligence and Machine Learning
+            </option>
+            <option value="data-science-analytics">
+              Data Science and Analytics
+            </option>
+            <option value="cybersecurity">Cybersecurity</option>
+            <option value="internet-of-things">Internet of Things (IoT)</option>
+            <option value="blockchain-technology">Blockchain Technology</option>
+            <option value="game-development">Game Development</option>
+            <option value="ar-vr">
+              Augmented Reality (AR) and Virtual Reality (VR)
+            </option>
+            <option value="open-source-development">
+              Open Source Development
+            </option>
+            <option value="frameworks-libraries">
+              Frameworks and Libraries (e.g., Ruby on Rails, React, Angular)
+            </option>
+            <option value="api-development">
+              API Development and Integration
+            </option>
+            <option value="performance-optimization">
+              Performance Optimization
+            </option>
+            <option value="testing-automation">Testing and Automation</option>
+            <option value="software-architecture">Software Architecture</option>
           </Select>
         </div>
         <div className="flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-3">
